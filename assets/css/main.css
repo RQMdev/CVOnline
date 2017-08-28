@@ -3,7 +3,7 @@
 	src: url('assets/fonts/Rajdhani/Rajdhani-Regular.ttf');
 }
 
-@font-face {
+/*@font-face {
 	font-family: "Rajdhani";
 	src: url('assets/fonts/Rajdhani/Rajdhani-Bold.ttf');
 	font-weight: bold, 700;
@@ -25,7 +25,7 @@
 	font-family: "Rajdhani";
 	src: url('assets/fonts/Rajdhani/Rajdhani-SemiBold.ttf');
 	font-weight: 600;
-}
+}*/
 
 html {
 	margin: 0;
@@ -40,11 +40,228 @@ body {
 }
 
 #page-container {
-	width: 100%;
-	height: 142%;
+
 }
 
 .photo {
 	width: 12rem;
 	height: auto;
+}
+
+
+
+/*
+ALL BEYOND RULES ARE FOR PRINT ONLY !!!
+*/
+@media print {
+
+	body {
+		-webkit-print-color-adjust: exact;
+	}
+
+	.photo {
+		position: absolute;
+		top: 15px;
+		left: 200px;
+		width: 100px;
+		border-radius: 10px;
+		transform: rotate(-1deg);
+	}
+
+	.title {
+		font-size: 20px;
+		text-transform: uppercase;
+		margin-bottom: 7px;
+	}
+
+	.personal-info-container {
+		position: absolute;
+		top: 10px;
+		left: 320px;
+	}
+
+	.name-wrapper {
+		position: relative;
+		margin-bottom: 10px;
+	}
+
+	.name-wrapper:after {
+		content: '';
+		position: absolute;
+		top: -4px;
+		left: -5px;
+		right: -5px;
+		border-bottom: 25px solid #333;
+		z-index: -1;
+		transform: rotate(-1deg);
+	}
+
+	.first-name, .last-name {
+		display: inline;
+		color: white;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+
+	.city, .birthdate, .licence, .car {
+		font-size: 14px;
+	}
+
+	.headline-container {
+		position: absolute;
+		top: 175px;
+		left: 100px;
+		font-size: 24px;
+	}
+
+	.headline {
+		position: relative;
+		text-transform: uppercase;
+		transform: translate(-20px, -10px);
+	}
+
+	.headline:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -5px;
+		right: -5px;
+		color: #aaa;
+		border-bottom: 40px solid #eee;
+		transform: translate(20px, 10px);
+		z-index: -1;
+	}
+
+	.project-container {
+		position: absolute;
+		top: 250px;
+		left: 0;
+		width: 40%;
+	}
+
+	.project {
+		margin-bottom: 10px;
+	}
+
+	.project-name {
+		position: relative;
+		text-transform: uppercase;
+		color: white;
+		margin-bottom: 5px;
+	}
+
+	.project-name:after {
+		content: '';
+		position: absolute;
+		top: -4px;
+		left: -5px;
+		right: -5px;
+		border-bottom: 25px solid #333;
+		z-index: -1;
+		transform: rotate(-1deg);
+	}
+
+	.project-description {
+		font-size: 12px;
+	}
+
+	.project-url {
+		font-size: 12px;
+	}
+
+	.languages-container {
+		position: absolute;
+		top: 250px;
+		right: 0;
+		width: 50%;
+		text-align: right;
+	}
+
+	.languages-title {
+		margin-bottom: 15px;
+	}
+
+	.languages {
+		text-transform: uppercase;
+		color: white;
+	}
+
+	.languages-name {
+		position: relative;
+		right: 10px;
+	}
+
+	.languages-progress-bar {
+		position: relative;
+		top: -22px;
+		width: 100%;
+		border-bottom: 25px solid #eee;
+		z-index: -1;
+	}
+
+	.languages-actual-level {
+		position: absolute;
+		height: 100%;
+		border-bottom: 25px solid #333;
+		transform: rotate(-1deg);
+	}
+
+	/* Progress Bar Size */
+	#wordpress { width: 50%; left: 50%; }
+	#html5 { width: 85%; left: 15%; }
+	#pug { width: 30%; left: 70%; }
+	#css3 { width: 70%; left: 30%; }
+	#bootstrap { width: 40%; left: 60%; }
+	#sass { width: 40%; left: 60%; }
+	#javascript { width: 70%; left: 30%; }
+	#vue-js { width: 30%; left: 70%; }
+	#php { width: 60%; left: 40%; }
+	#mysql { width: 60%; left: 40%; }
+	#git { width: 70%; left: 30%; }
+
+	.diploma-container {
+		position: absolute;
+		width: 100%;
+		top: 850px;
+		left: 0;
+	}
+
+	.diploma-wrapper {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	.diploma-name {
+		position: relative;
+		text-transform: uppercase;
+		color: white;
+		margin-bottom: 5px;
+	}
+
+	.diploma-name:after {
+		content: '';
+		position: absolute;
+		top: -4px;
+		left: -5px;
+		right: -5px;
+		border-bottom: 25px solid #333;
+		z-index: -1;
+		transform: rotate(-1deg);
+	}
+
+	.school, .date {
+		display: inline;
+	}
+
+	.soft-skills-container, .hard-skills-container {
+		display: none;
+	}
+
+
+
+
+
 }
