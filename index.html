@@ -10,13 +10,26 @@
 <body>
 	<div id="page-container">
 
-		<img src="assets/img/RQM_logo4.png" alt="" class="logo">
+		<div class="perspective-wrapper">
+			<img src="assets/img/RQM_logo4.png" alt="" class="logo">
+		</div>
 
-		<div class="photo-container">
+		<nav class="navbar">
+			<ul>
+				<li class="nav-personal-info" data-hover="Infos Personnelles">Infos Personnelles</li>
+				<li class="nav-projects" data-hover="Projets">Projets</li>
+				<li class="nav-languages" data-hover="Langages">Langages</li>
+				<li class="nav-experiences" data-hover="Expériences">Expériences</li>
+				<li class="nav-diplomas" data-hover="Diplômes">Diplômes</li>
+				<li class="nav-hobbies" data-hover="Hobbies">Hobbies</li>
+			</ul>
+		</nav>
+
+		<div class="photo-container container">
 			<img class="photo" src="assets/img/benoit_laurent_trombi_cropped.jpg" alt="">
 		</div>
 
-		<div class="personal-info-container">
+		<div class="personal-info-container container">
 			<div class="name-wrapper">
 				<div class="personal-info first-name">Benoit 'RQM-'</div>
 				<div class="personal-info last-name">Laurent</div>
@@ -29,11 +42,11 @@
 			<div class="personal-info car">Véhiculé</div>
 		</div><!-- personal-info-container end -->
 
-		<div class="headline-container">
+		<div class="headline-container container">
 			<div class="headline">Développeur Web Junior</div>
 		</div>
 
-		<div class="project-container">
+		<div class="projects-container container">
 			<div class="project-title title">Projets</div>
 			<div class="project">
 				<div class="project-name">Apex Assistance</div>
@@ -66,7 +79,7 @@
 			</div>
 		</div><!-- project-container end -->
 
-		<div class="languages-container">
+		<div class="languages-container container">
 			<div class="languages-title title">Langages</div>
 				<div class="languages">
 					<div class="languages-name">Wordpress</div>
@@ -143,7 +156,7 @@
 			</div>
 		</div><!-- languages-container end -->
 
-		<div class="experiences-container">
+		<div class="experiences-container container">
 			<div class="experiences-title title">Expériences</div>
 			<div class="experiences-wrapper">
 				<div class="experience">
@@ -163,7 +176,7 @@
 			</div>
 		</div><!-- experience-container end -->
 
-		<div class="diploma-container">
+		<div class="diplomas-container container">
 			<div class="diploma-title title">Diplômes</div>
 
 			<div class="diploma-wrapper">
@@ -193,7 +206,7 @@
 			</div>
 		</div><!-- diploma-container end -->
 
-		<div class="hobbies-container">
+		<div class="hobbies-container container">
 			<div class="hobbies-title title">Loisirs</div>
 			<div class="hobbies-wrapper">
 
@@ -245,17 +258,18 @@
 			</div>
 		</div><!-- hobbies-container end -->
 
-		<div class="soft-skills-container">
+		<div class="soft-skills-container container">
 			<div class="soft-skills-title title">Soft Skills</div>
 			<div class="soft-skills"></div>
 		</div>
 
-		<div class="hard-skills-container">
+		<div class="hard-skills-container container">
 			<div class="hard-skills-title title">Hard Skills</div>
 			<div class="hard-skills"></div>
 		</div>
 
 	</div><!-- #page-container end -->
+	<script src="assets/js/jquery-3.2.1.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
 </html>

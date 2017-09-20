@@ -45,7 +45,110 @@ body {
 }
 
 #page-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 
+}
+
+.perspective-wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	perspective: 300px;
+	transition: 1s;
+}
+
+.logo {
+	animation: logoRotation 5s linear infinite;
+}
+
+.toMenu .perspective-wrapper {
+	top: -3%;
+	left: 0%;
+	transform: scale(0.5);
+}
+
+.navbar {
+	list-style-type: none;
+	line-height: 5rem;
+	opacity: 1;
+}
+
+.navbar ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.navbar li {
+	position: relative;
+	cursor: default;
+	list-style-type: none;
+	margin: 0.5rem 2rem;
+	opacity: 0;
+	overflow: hidden;
+	transform: translate(-200px);
+	transition: 1s;
+}
+
+.navbar li:after {
+	content: '';
+	color: white;
+	position: absolute;
+	line-height: 1rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background-color: black;
+	opacity: 1;
+	transform: translate(-101%);
+	transition: .3s;
+}
+
+.navbar li:hover:after {
+	transform: translate(0);
+}
+
+.toMenu .nav-personal-info {
+	transform: translate(0);
+	transition-delay: 1000ms;
+	opacity: 1;
+}
+
+.toMenu .nav-projects {
+	transform: translate(0);
+	transition-delay: 800ms;
+	opacity: 1;
+}
+
+.toMenu .nav-languages {
+	transform: translate(0);
+	transition-delay: 600ms;
+	opacity: 1;
+}
+
+.toMenu .nav-experiences {
+	transform: translate(0);
+	transition-delay: 400ms;
+	opacity: 1;
+}
+
+.toMenu .nav-diplomas {
+	transform: translate(0);
+	transition-delay: 200ms;
+	opacity: 1;
+}
+
+.toMenu .nav-hobbies {
+	transform: translate(0);
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+.display {
+	opacity: 1 !important;
 }
 
 .photo {
@@ -53,7 +156,36 @@ body {
 	height: auto;
 }
 
+.container {
+	position: fixed;
+	opacity: 0;
+	transition: 1s;
+}
 
+.photo-container {
+	right: 15%;
+	top: 20%;
+}
+
+.name-wrapper {
+	position: fixed;
+}
+
+
+
+.headline-container {
+	opacity: 0;
+}
+
+
+
+@keyframes logoRotation {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+	}
+}
 
 /*
 ALL BEYOND RULES ARE FOR PRINT ONLY !!!
@@ -84,6 +216,7 @@ ALL BEYOND RULES ARE FOR PRINT ONLY !!!
 		width: 100px;
 		border-radius: 0;
 		transform: rotate(-1deg);
+		opacity: 1;
 	}
 
 	.title {
@@ -96,6 +229,7 @@ ALL BEYOND RULES ARE FOR PRINT ONLY !!!
 		position: absolute;
 		top: 10px;
 		left: 120px;
+		opacity: 1;
 	}
 
 	.name-wrapper {
@@ -131,6 +265,7 @@ ALL BEYOND RULES ARE FOR PRINT ONLY !!!
 		top: 300px;
 		left: 143px;
 		font-size: 40px;
+		opacity: 1;
 	}
 
 	.headline {
@@ -152,11 +287,12 @@ ALL BEYOND RULES ARE FOR PRINT ONLY !!!
 		z-index: -1;
 	}*/
 
-	.project-container {
+	.projects-container {
 		position: absolute;
 		top: 160px;
 		left: 0;
 		width: 45%;
+		opacity: 1;
 	}
 
 	.project {
